@@ -15,7 +15,7 @@ class LocationsContainer extends React.Component {
     return (
       <div>
         <Route path='/locations/new' component={LocationsForm} />
-        <Route path='/locations/:id' render={(routerProps) => <LocationShow {...routerProps} locations={this.props.locations} />} />
+        <Route exact path='/locations/:id' render={(routerProps) => <LocationShow {...routerProps} locations={this.props.locations} />} />
         <Route exact path='/locations' render={(routerProps) => <Locations {...routerProps} locations={this.props.locations} />} />
         <br></br>
       </div>
