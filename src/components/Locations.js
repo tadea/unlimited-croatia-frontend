@@ -8,7 +8,7 @@ const Locations = (props) => {
     <div>
       {props.locations.map(location =>
         <div key={location.id}>
-          <Link path={`/locations/${location.id}`}>{location.name}</Link>
+          <Link to={`/locations/${location.id}`}>{location.name}</Link>
         </div>)}
     </div>
   );
