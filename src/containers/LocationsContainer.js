@@ -12,8 +12,10 @@ class LocationsContainer extends React.Component {
   render() {
     return (
       <div>
-        <Locations locations={this.props.locations} />
         <LocationsForm />
+        <br></br>
+        <br></br>
+        <Locations locations={this.props.locations} />
       </div>
     );
   }
