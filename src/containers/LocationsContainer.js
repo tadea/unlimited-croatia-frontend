@@ -4,7 +4,7 @@ import LocationShow from "../components/LocationShow.js";
 import LocationsForm from "../components/LocationsForm.js";
 import { connect } from "react-redux";
 import { fetchLocations } from "../actions/fetchLocations.js";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 class LocationsContainer extends React.Component {
   componentDidMount() {
@@ -14,9 +14,11 @@ class LocationsContainer extends React.Component {
   render() {
     return (
       <div>
-        <Route path='/locations/new' component={LocationsForm} />
-        <Route exact path='/locations/:id' render={(routerProps) => <LocationShow {...routerProps} locations={this.props.locations} />} />
-        <Route exact path='/locations' render={(routerProps) => <Locations {...routerProps} locations={this.props.locations} />} />
+        <Switch>
+          <Route path='/locations/new' component={LocationsForm} />
+          <Route path='/locations/:id' render={(routerProps) => <LocationShow {...routerProps} locations={this.props.locations} />} />
+          <Route exact path='/locations' render={(routerProps) => <Locations {...routerProps} locations={this.props.locations} />} />
+        </Switch>
         <br></br>
       </div>
     );
