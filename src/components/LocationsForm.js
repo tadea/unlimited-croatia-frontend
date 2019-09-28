@@ -6,6 +6,12 @@ class LocationsForm extends React.Component {
     city: ""
   };
 
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
   render() {
     return (
       <div>
