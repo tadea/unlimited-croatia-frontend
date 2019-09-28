@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { addLocation } from "../actions/addLocation.js";
 
 class LocationsForm extends React.Component {
   state = {
@@ -10,6 +12,11 @@ class LocationsForm extends React.Component {
     this.setState({
       [event.target.name]: event.target.value
     });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.addLocation(this.state);
   };
 
   render() {
@@ -39,4 +46,7 @@ class LocationsForm extends React.Component {
   }
 }
 
-export default LocationsForm;
+export default connect(
+  null,
+  { addLocation }
+)(LocationsForm);
