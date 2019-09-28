@@ -17,6 +17,10 @@ class LocationsForm extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addLocation(this.state);
+    this.setState({
+      name: "",
+      city: ""
+    });
   };
 
   render() {
