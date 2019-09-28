@@ -1,12 +1,13 @@
 import React from "react";
+import LocationShow from "./LocationShow.js";
 
 const Locations = props => {
   return (
     <div>
       {props.locations.map(location => (
-        <li key={location.id}>
-          {location.name} - {location.city}
-        </li>
+        <div key={location.id}>
+          <LocationShow location={location} />
+        </div>
       ))}
     </div>
   );
