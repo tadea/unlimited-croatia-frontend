@@ -1,4 +1,5 @@
 import React from "react";
+import BeachesContainer from '../containers/BeachesContainer.js'
 
 const LocationShow = (props) => {
   console.log(props);
@@ -7,9 +8,12 @@ const LocationShow = (props) => {
   console.log(location)
 
   return (
-    <li>
-      {location ? location.name : null} - {location ? location.city : null}
-    </li>
+    <div>
+      <li>
+        {location ? location.name : null} - {location ? location.city : null}
+      </li>
+      <BeachesContainer location={location} />
+    </div>
   );
 };
 
