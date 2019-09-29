@@ -7,7 +7,7 @@ class BeachesContainer extends React.Component {
     render() {
         return (
             <div>
-                <BeachForm />
+                <BeachForm location={this.props.location} />
                 <Beaches beaches={this.props.location && this.props.location.beaches} />
             </div>
         );
