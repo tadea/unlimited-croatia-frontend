@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Beaches = (props) => {
+    console.log(props.beaches)
+
     return (
         <div>
             {props.beaches && props.beaches.map(beach =>
