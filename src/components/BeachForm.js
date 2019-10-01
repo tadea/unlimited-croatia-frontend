@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { addBeach } from '../actions/addBeach';
 
 class BeachForm extends React.Component {
     state = {
@@ -16,7 +17,12 @@ class BeachForm extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
-
+        this.props.addBeach(this.state, this.props.location.id)
+        this.setState({
+            name: '',
+            region: 'Istria',
+            summary: ''
+        })
     };
 
 
@@ -53,4 +59,4 @@ class BeachForm extends React.Component {
     }
 }
 
-export default connect()(BeachForm);
+export default connect(null, { addBeach })(BeachForm);
