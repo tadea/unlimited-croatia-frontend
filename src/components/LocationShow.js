@@ -5,6 +5,7 @@ const LocationShow = (props) => {
   console.log(props);
 
   let location = props.locations[props.match.params.id - 1]
+  // let location = props.locations.filter(location => location.id === props.match.params.id)[0]
   console.log(location)
 
   return (
