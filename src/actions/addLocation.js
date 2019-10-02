@@ -8,7 +8,14 @@ export const addLocation = data => {
       body: JSON.stringify(data)
     })
       .then(response => response.json())
-      .then(location => dispatch({ type: "ADD_LOCATION", payload: location }));
+      .then(location => {
+        if (location.error) {
+          alert(location.error)
+        } else {
+          dispatch(location => dispatch({ type: "ADD_LOCATION", payload: location }))
+        }
+      })
+
   };
 };
 

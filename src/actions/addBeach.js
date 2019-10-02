@@ -8,8 +8,14 @@ export const addBeach = (beach, locationId) => {
             body: JSON.stringify(beach)
         })
             .then(response => response.json())
-            .then(location => dispatch({ type: "ADD_BEACH", payload: location }));
-    };
+            .then(location => {
+                if (location.error) {
+                    alert(location.error)
+                } else {
+                    dispatch({ type: "ADD_BEACH", payload: location })
+                }
+            })
+    }
 };
 
 export default addBeach;
