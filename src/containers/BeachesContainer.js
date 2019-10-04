@@ -8,7 +8,9 @@ class BeachesContainer extends React.Component {
         return (
             <div>
                 <BeachForm location={this.props.location} />
-                <Beaches beaches={this.props.location && this.props.location.beaches} />
+                <div className="BeachesContainer">
+                    <Beaches beaches={this.props.location && this.props.location.beaches} />
+                </div>
             </div>
         );
     }

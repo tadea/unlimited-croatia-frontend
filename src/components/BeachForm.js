@@ -28,7 +28,7 @@ class BeachForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="form">
                 <form onSubmit={this.handleSubmit}>
                     <label>Beach Name</label>
                     <input
@@ -37,13 +37,13 @@ class BeachForm extends React.Component {
                         name="name"
                         type="text"
                         onChange={this.handleChange}
-                    />
+                    /><br></br>
                     <label>Choose Region</label>
                     <select name="region" value={this.state.region} onChange={this.handleChange}>
                         <option>Istria</option>
                         <option>Kvarner</option>
                         <option>Dalmatia</option>
-                    </select>
+                    </select><br></br>
                     <label>Summary</label>
                     <input
                         placeholder="summary"
@@ -51,7 +51,7 @@ class BeachForm extends React.Component {
                         name="summary"
                         type="text"
                         onChange={this.handleChange}
-                    />
+                    /><br></br>
                     <input type="submit" value="Create" />
                 </form>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import BeachesContainer from '../containers/BeachesContainer.js'
+import "../App.scss";
 
 const LocationShow = (props) => {
   console.log(props);
@@ -9,12 +10,15 @@ const LocationShow = (props) => {
   console.log(location)
 
   return (
-    <div>
-      <li>
-        {location ? location.name : null} - {location ? location.city : null}
-      </li>
-      <BeachesContainer location={location} />
-    </div>
+    <React.Fragment>
+      <div className="locationName">
+        <h1><i class="fas fa-umbrella-beach"></i><br></br>{location ? location.name : null}-{location ? location.city : null}</h1>
+      </div>
+      <div>
+        <BeachesContainer location={location} />
+      </div>
+    </React.Fragment>
+
   );
 };
 

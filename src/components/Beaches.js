@@ -1,21 +1,26 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { deleteBeach } from '../actions/deleteBeach.js'
+import "../App.scss";
+import Beach from "../images/beach.jpeg"
 
 const Beaches = (props) => {
 
-
     const handleDelete = (beach) => {
-
-        console.log("handleDelete", props)
-
         props.deleteBeach(beach.id, beach.location_id)
     }
 
     return (
-        <div>
+        <div className="BeachesCard">
             {props.beaches && props.beaches.map(beach =>
-                <li key={beach.id}>{beach.name} - {beach.summary}<button onClick={() => handleDelete(beach)}>Delete</button></li>)}
+                <div className="beach-info" key={beach.id}>
+                    <img className="beachImage" src={Beach} alt={beach.name} />
+                    <h3>{beach.name}</h3>
+                    <h5>{beach.summary}</h5>
+                    <button className="close-btn" onClick={() =>
+                        handleDelete(beach)}><i class="fas fa-trash-alt"></i></button>
+                </div>
+            )}
         </div>
     )
 }

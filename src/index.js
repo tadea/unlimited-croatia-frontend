@@ -7,6 +7,7 @@ import locationReducer from "./reducers/locationReducer";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(

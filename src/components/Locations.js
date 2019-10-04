@@ -7,8 +7,8 @@ const Locations = (props) => {
   return (
     <div>
       {props.locations.map(location =>
-        <div key={location.id}>
-          <Link to={`/locations/${location.id}`}>{location.name}</Link>
+        <div className="LocationCard" key={location.id}>
+          <h4><Link to={`/locations/${location.id}`}>{location.city}</Link></h4>
         </div>)}
     </div>
   );

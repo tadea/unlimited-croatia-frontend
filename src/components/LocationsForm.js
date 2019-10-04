@@ -25,7 +25,7 @@ class LocationsForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="createLocation">
         <form onSubmit={this.handleSubmit}>
           <label>Region Name</label>
           <input
@@ -34,7 +34,7 @@ class LocationsForm extends React.Component {
             name="name"
             type="text"
             onChange={this.handleChange}
-          />
+          /><br></br><br></br>
           <label>City Name</label>
           <input
             placeholder="city name"
@@ -42,8 +42,9 @@ class LocationsForm extends React.Component {
             name="city"
             type="text"
             onChange={this.handleChange}
-          />
+          /><br></br><br></br>
           <input type="submit" value="Submit" />
+          <br></br>
         </form>
       </div>
     );
