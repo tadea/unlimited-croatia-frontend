@@ -1,28 +1,6 @@
-.App {
-  text-align: center;
-  font-family: 'cormoront garamond', serif;
-}
+@import 'index.scss';
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #ffffff;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-}
-
-.App-link {
-  color: #b5cfca;
-}
-
-/* Navbar */
+/////////////////* Navbar */////////////////
 .navbar {
   background-color: rgb(22, 55, 144);
   display: flex;
@@ -33,7 +11,7 @@
 .navbar a {
   text-decoration: none;
   color: white;
-  font-family: 'cormoront garamond', serif;
+  font-family: "Open Sans", sans-serif;
   padding: 20px;
 }
 
@@ -55,18 +33,15 @@
   color: rgb(18, 218, 191);
   cursor: pointer; 
 }
-/* end of Navbar */
+//////////////////* end of Navbar *//////////////////
 
-/*banner*/
+
+/////////////////* BANNER */////////////////
 .banner {
   background: url("../src/images/adriatic-beach-boat.jpg") no-repeat;
-    /*background-attachment: fixed;*/
   min-height: 600px;
   position: relative;
   overflow: hidden;
-  /****************************************************
-  * set the backround image to 100% width of the screen 
-  *****************************************************/
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover !important;
@@ -78,76 +53,49 @@
 .banner h1,
 .banner p {
   color: white;
-  font-family: 'cormoront garamond', serif;
 }
 
 .banner .row {
   margin-top: 100px;
   text-align: center
 }
-/*end of banner*/
 
-/*LocationCard*/
+/////////////////*end of banner*//////////////////
+
+/////////////////* LOCATIONS *//////////////////
 
 .LocationCard {
-  border-radius: 2px;
+  border-radius: 3px;
   display: inline-block;
   height: 60px;
-  margin: 1rem;
+  margin: 2rem;
   position: flex;
   width: 100px;
   text-align: center;
   background:  whitesmoke;
   padding: 19px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(47, 100, 246, 0.12), 0 1px 2px rgba(17, 64, 151, 0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
- .LocationCard:hover {
+
+.LocationCard:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.LocationCard a {
+   color: black;   
  }
 
- .LocationCard a {
-   color: black;
-   font-family: 'cormoront garamond', serif;
- }
- /* end LocationCard*/
-
- /*About Page*/
-
- .about h3{
+ .createLocation {
   position: absolute;
-  font-weight: lighter;
-  top: 20%;
+  top: 30%;
   left: 40%;
   margin-top: -50px;
   margin-left: -50px;
   width: 240px;
-  height: 200px;
+  height: 240px;
   text-align: center;
   background: whitesmoke;
-  font-family: 'cormoront garamond', serif;
-  padding: 30px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.about:hover h3{
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
- }
-
-  /*end About Page*/
-
-.createLocation {
-  position: absolute;
-  top: 29%;
-  left: 40%;
-  margin-top: -50px;
-  margin-left: -50px;
-  width: 240px;
-  height: 100px;
-  text-align: center;
-  background: whitesmoke;
-  font-family: 'cormoront garamond', serif;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -157,28 +105,83 @@
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
  }
 
- .locationName {
+ .locationName h1 {
   display: flex;
+  padding: 20px;
+  margin: 1rem 0;
+
+ }
+ /////////////////* END OF LOCATIONS *//////////////////
+
+ /////////////////* ABOUT PAGE *//////////////////
+
+ .about h3{
+  position: absolute;
+  font-weight: lighter;
+  top: 30%;
+  left: 40%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 300px;
+  height: 290px;
+  text-align: center;
+  background: whitesmoke;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.about:hover h3{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+ }
+/////////////////* END ABOUT PAGE *//////////////////
+
+/////////////////* BEACHES *//////////////////
+ .form {
+  display: flex;
+  padding: 20px;
+  margin: 1rem 0;
+
  }
 
  .BeachesCard {
-  width: 70vw;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 2rem 0;
-
-    
+  background: whitesmoke;
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+  float: left;
 }
 
-.rowC{
-  padding: 89px;
-  position: fixed;
+.close-btn {
+  position: absolute;
+  display: block;
+  color: rgb(61, 89, 167);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  opacity: 8;
+}
+.beach-info {
+  padding: 1.7rem 0.5rem;
+  h3 {
+    text-transform: uppercase;
+    color: rgb(61, 89, 167);
+  }
+  h5 {
+    text-transform: capitalize;
+  }
 }
 
 .BeachesContainer {
-  
-  background: whitesmoke;
-  margin: 2rem 0;
-
+  width: 70vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 2rem 0; 
 }
 
+.beachImage {
+  width: 100%;
+  display: block;
+  min-height: 13rem;
+}
+
+/////////////////* END BEACHES *//////////////////
