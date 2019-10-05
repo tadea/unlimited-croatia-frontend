@@ -12,11 +12,10 @@ export const addLocation = data => {
         if (location.error) {
           alert(location.error)
         } else {
-          dispatch(location => dispatch({ type: "ADD_LOCATION", payload: location }))
+          dispatch({ type: "ADD_LOCATION", payload: location })
         }
       })
-
   };
 };
 
-export default addLocation;
+
