@@ -18,4 +18,5 @@ export const addLocation = data => {
   };
 };
 
+export default addLocation;
 

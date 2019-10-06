@@ -3,21 +3,19 @@ import BeachesContainer from '../containers/BeachesContainer.js'
 import "../App.scss";
 
 const LocationShow = (props) => {
-  console.log(props);
 
-  let location = props.locations[props.match.params.id - 1]
-  // let location = props.locations.filter(location => location.id === props.match.params.id)[0]
-  console.log(location)
+  let location = props.locations.filter(location => location.id == props.match.params.id)[0]
 
   return (
-    <React.Fragment>
-      <div className="locationName">
-        <h1><i class="fas fa-umbrella-beach"></i><br></br>{location ? location.name : null}-{location ? location.city : null}</h1>
-      </div>
+
+    <div className="locationName">
+      <h1><i className="fas fa-umbrella-beach"></i><br></br>{location ? location.name : null}-{location ? location.city : null}</h1>
+
       <div>
         <BeachesContainer location={location} />
       </div>
-    </React.Fragment>
+    </div>
+
 
   );
 };
