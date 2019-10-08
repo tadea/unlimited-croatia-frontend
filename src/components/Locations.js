@@ -1,6 +1,6 @@
 import React from "react";
-import { Route, Link } from 'react-router-dom'
-import LocationShow from "./LocationShow.js";
+import { Link } from 'react-router-dom'
+
 
 const Locations = (props) => {
 

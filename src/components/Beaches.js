@@ -18,7 +18,7 @@ const Beaches = (props) => {
                     <h3>{beach.name}</h3>
                     <h5>{beach.summary}</h5>
                     <button className="close-btn" onClick={() =>
-                        handleDelete(beach)}><i class="fas fa-trash-alt"></i></button>
+                        handleDelete(beach)}><i className="fas fa-trash-alt"></i></button>
                 </div>
             )}
         </div>

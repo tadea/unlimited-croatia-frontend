@@ -22,11 +22,3 @@ export default (props) => {
 
 };
 
-
-
-
-{/* <div className="NavBar">
-    <Link to="/">Home</Link>
-    <Link to="/about">About</Link>
-    <Link to="/locations">Locations</Link>
-</div> */}
