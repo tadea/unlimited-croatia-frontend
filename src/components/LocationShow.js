@@ -5,23 +5,6 @@ import { Link } from "react-router-dom"
 
 class LocationShow extends React.Component {
 
-  // constructor(props) {
-  //   super(props)
-  // }
-  // state = {
-  //   count: 0,
-
-  // }
-
-  // handleClick = () => {
-
-  //   this.setState({
-  //     count: this.state.count + 1
-  //   });
-
-
-  // }
-
 
   // let location = props.locations.filter(location => location.id == props.match.params.id)[0]
   render() {
@@ -33,8 +16,6 @@ class LocationShow extends React.Component {
         <h1><i className="fas fa-umbrella-beach"></i>
           <br></br>
           {location ? location.name : null}-{location ? location.city : null}</h1>
-
-
         <div>
           <BeachesContainer location={location} />
         </div>
