@@ -8,9 +8,6 @@
 6. Start up the front-end by typing "npm start" to run the app in the development mode. A new browser should open up automatically. Alternatively, it will be accessible by navigating to 'http://localhost:3000'.
 
 
-## Bug reports
-
-Feel free to report any bugs on GitHub or directly to my email: wendycalderon@gmail.com
 
 
 ## License
