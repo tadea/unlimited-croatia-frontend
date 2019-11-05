@@ -2,6 +2,7 @@ import React from 'react'
 import BeachForm from '../components/BeachForm'
 import Beaches from '../components/Beaches.js'
 
+
 class BeachesContainer extends React.Component {
 
     render() {

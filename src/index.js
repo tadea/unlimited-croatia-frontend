@@ -6,7 +6,8 @@ import { Provider } from "react-redux"; //any component that we wrap will have a
 import locationReducer from "./reducers/locationReducer";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
-
+import Clock from './components/Clock'
+import Locations from "./components/Locations";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -18,6 +19,7 @@ let store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <Router>
+      <Clock />
       <App />
     </Router>
   </Provider>,
