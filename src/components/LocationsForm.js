@@ -7,7 +7,7 @@ class LocationsForm extends React.Component {
     name: "",
     city: ""
   };
-  //A,C,B,D
+
   handleChange = event => {
     this.setState({
       [event.target.name]: event.target.value
@@ -16,9 +16,7 @@ class LocationsForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log('A');
     this.props.addLocation(this.state);
-    console.log('B');
     this.setState({
       name: "",
       city: ""
