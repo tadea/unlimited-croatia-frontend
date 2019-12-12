@@ -16,7 +16,8 @@ class LocationsForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addLocation(this.state);
+    this.props.addLocation(this.state, this.props.history);
+
     this.setState({
       name: "",
       city: ""
@@ -34,7 +35,8 @@ class LocationsForm extends React.Component {
             name="name"
             type="text"
             onChange={this.handleChange}
-          /><br></br><br></br>
+          />
+          <br />
           <label>City Name</label>
           <input
             placeholder="city name"
@@ -42,16 +44,14 @@ class LocationsForm extends React.Component {
             name="city"
             type="text"
             onChange={this.handleChange}
-          /><br></br><br></br>
+          />
+          <br />
           <input type="submit" value="Submit" />
-          <br></br>
+          <br />
         </form>
       </div>
     );
   }
 }
 
-export default connect(
-  null,
-  { addLocation }
-)(LocationsForm);
+export default connect(null, { addLocation })(LocationsForm);
