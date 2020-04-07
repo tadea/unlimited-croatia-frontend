@@ -5,23 +5,23 @@ import { addLocation } from "../actions/addLocation.js";
 class LocationsForm extends React.Component {
   state = {
     name: "",
-    city: ""
+    city: "",
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     this.props.addLocation(this.state, this.props.history);
 
     this.setState({
       name: "",
-      city: ""
-    });
+      city: "",
+    }).then(() => this.props.history.push("/locations"));
   };
 
   render() {
