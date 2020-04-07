@@ -21,7 +21,7 @@ class LocationsForm extends React.Component {
     this.setState({
       name: "",
       city: "",
-    }).then(() => this.props.history.push("/locations"));
+    });
   };
 
   render() {
